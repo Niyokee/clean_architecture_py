@@ -1,11 +1,9 @@
 import os
 import psycopg2 as pg
-import pandas as pd
-from pandas.core.frame import DataFrame
-import pandas.io.sql as psql
 from sqlalchemy import create_engine
 
 bool_t = bool  # Need alias because NDFrame has def bool:
+
 
 class DB:
 
@@ -45,8 +43,6 @@ class DB:
         )
         conn.set_client_encoding('utf-8')
         return conn
-
-
 
     def engine(self):
         """DBの接続情報をインスタンス変数に格納する

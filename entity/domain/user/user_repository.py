@@ -1,8 +1,9 @@
 # Repositoryは Interface Adapterレイヤーにあるgatewayパターン
 # DBとusecaseとentityのアダプタ
 
-from domain.domain.user import User
+from entity.domain.user.user import User
 from abc import ABCMeta, abstractmethod
+
 
 class IUserRepository(metaclass=ABCMeta):
     @abstractmethod
